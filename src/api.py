@@ -11,7 +11,8 @@ class AeroplanesAPI(AbstractAPI):
 
     def _connect(self, url: str, params: dict = None) -> requests.Response:
         """Приватный метод для отправки запроса"""
-        response = requests.get(url, params=params, timeout=10)
+        headers = {"User-Agent": "YourAppName/1.0 (danilo98.24fevral@gmail.com)"}
+        response = requests.get(url, params=params, timeout=10, headers=headers)
         response.raise_for_status()
         return response
 
