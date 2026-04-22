@@ -1,4 +1,5 @@
 import requests
+
 from src.abstract_api import AbstractAPI
 
 
@@ -42,14 +43,16 @@ class AeroplanesAPI(AbstractAPI):
 
         result = []
         for state in data.get("states", []):
-            result.append({
-                "icao24": state[0],
-                "callsign": state[1],
-                "origin_country": state[2],
-                "longitude": state[5],
-                "latitude": state[6],
-                "altitude": state[7],
-                "velocity": state[9],
-                "heading": state[10]
-            })
+            result.append(
+                {
+                    "icao24": state[0],
+                    "callsign": state[1],
+                    "origin_country": state[2],
+                    "longitude": state[5],
+                    "latitude": state[6],
+                    "altitude": state[7],
+                    "velocity": state[9],
+                    "heading": state[10],
+                }
+            )
         return result
