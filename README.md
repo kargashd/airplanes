@@ -12,14 +12,13 @@
 
 ## Технологии
 - Python 3.12+
-- Pandas
 - Requests
 - Pytest
 - Flake8
 - Black
 - Isort
 - Mypy
-- 
+
 ## Начало работы
 
 ### Требования
@@ -27,12 +26,12 @@
 
 ### Установка зависимостей
 
-1. Клонируйте репозиторий:
+#### Клонируйте репозиторий:
 
 git clone https://github.com/kargashd/airplanes.git
 cd airplanes
 
-2. Создайте и активируйте виртуальное окружение:
+#### Создайте и активируйте виртуальное окружение:
 
 python -m venv .venv
 .venv\Scripts\activate
@@ -42,7 +41,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 
-3. Установите зависимости:
+#### Установите зависимости:
 
 pip install -r requirements.txt
 
