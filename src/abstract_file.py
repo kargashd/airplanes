@@ -6,7 +6,7 @@ class AbstractFile(ABC):
     """Абстрактный класс для работы с файлами"""
 
     @abstractmethod
-    def add_eroplane(self, aeroplane: Dict[str, Any]) -> None:
+    def add_aeroplane(self, aeroplane: Dict[str, Any]) -> None:
         """Добавляет информацию о самолёте в файл"""
         pass
 
