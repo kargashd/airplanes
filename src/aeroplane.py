@@ -20,22 +20,28 @@ class Aeroplane:
     @staticmethod
     def _validate_altitude(altitude: float) -> float:
         """Проверяет, что высота не отрицательная"""
+        if altitude is None:
+            return 0.0
         if altitude < 0:
-            raise ValueError(f"Высота не должна быть отрицательной: {altitude}")
+            return 0.0  # вместо ошибки возвращаем 0
         return altitude
 
     @staticmethod
     def _validate_velocity(velocity: float) -> float:
         """Проверяет, что скорость не отрицательная"""
+        if velocity is None:
+            return 0.0
         if velocity < 0:
-            raise ValueError(f"Скорость не может быть отрицательной: {velocity}")
+            return 0.0  # вместо ошибки возвращаем 0
         return velocity
 
     @staticmethod
     def _validate_heading(heading: float) -> float:
-        """Проверяет, что курс не в диапозоне от 0 до 360"""
+        """Проверяет, что курс в диапазоне от 0 до 360"""
+        if heading is None:
+            return 0.0
         if heading < 0 or heading > 360:
-            raise ValueError(f"Курс не может быть отрицательным или больше 360: {heading}")
+            return 0.0  # вместо ошибки возвращаем 0
         return heading
 
     def __lt__(self, other: "Aeroplane") -> bool:  # Магический метод 'less than' - меньше чем
